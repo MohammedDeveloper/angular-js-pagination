@@ -1,0 +1,75 @@
+<div class="wrapper">
+    <div>
+        <input type="text" class="form-control" placeholder="Search flights..." ng-model="searchText.$">
+    </div>
+    <table class="table table-hover tableHeight">
+        <thead>
+            <th>
+                From
+            </th>
+            <th>
+                To
+            </th>
+            <th>
+                Flight Number
+            </th>
+            <th>
+                Departs
+            </th>
+            <th>
+                Arrives
+            </th>
+            <th>
+                Main Cabin Price
+            </th>
+            <th>
+                First Class Price
+            </th>
+        </thead>
+        <tbody>
+            <tr ng-repeat="flight in items | filter: searchText">
+                <td>
+                    {{ flight.From }}
+                </td>
+                <td>
+                    {{ flight.To }}
+                </td>
+                <td>
+                    {{ flight.FlightNumber }}
+                </td>
+                <td>
+                    {{ flight.Departs }}
+                </td>
+                <td>
+                    {{ flight.Arrives }}
+                </td>
+                <td>
+                    {{ flight.MainCabinPrice }}
+                </td>
+                <td>
+                    {{ flight.FirstClassPrice }}
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <!-- pagination -->
+    <div class="text-center">
+        <ul ng-if="pager.pages.length" class="pagination">
+            <li class="cursorPointer" ng-class="{disabled:pager.currentPage === 1}">
+                <a ng-click="setPage(1)">First</a>
+            </li>
+            <li class="cursorPointer" ng-class="{disabled:pager.currentPage === 1}">
+                <a ng-click="setPage(pager.currentPage - 1)">Previous</a>
+            </li>
+            <li class="cursorPointer" ng-repeat="page in pager.pages" ng-class="{active:pager.currentPage === page}">
+                <a ng-click="setPage(page)">{{page}}</a>
+            </li>
+            <li class="cursorPointer" ng-class="{disabled:pager.currentPage === pager.totalPages}">
+                <a ng-click="setPage(pager.currentPage + 1)">Next</a>
+            </li>
+            <li class="cursorPointer" ng-class="{disabled:pager.currentPage === pager.totalPages}">
+                <a ng-click="setPage(pager.totalPages)">Last</a>
+            </li>
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<!-- Boostrapping Technique - 2: Manual Boostrapping -->
+ <html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>angular-js-pagination</title>
+
+    <!-- CSS -->
+    <!-- GOOGLE FONT -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+    <!-- Before bundling -->    
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+        crossorigin="anonymous">   
+    <link href='css/style.css' rel='stylesheet' type='text/css'>
+
+    <!-- JS -->
+    <!-- Before bundling -->    
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular-route.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" `></script> 
+
+    <!-- AJS Content -->
+    <script src="angular/app.module.js"></script>
+    <script src="angular/app.router.js"></script>
+    <script src="angular/app.bootstrap.js"></script> 
+    <script src="angular/controllers/dashboardcontroller.js"></script> 
+    <script src="angular/services/paginationService.js"></script> 
+
+    <!-- Boostrapping Technique - 2: Manual Boostrapping - Mentioned above: angular/app.bootstrap.js-->
+    <base href="/">
+</head>
+
+<body>
+
+    <!-- NAV SECTION -->
+    <div class="navbar navbar-inverse navbar-fixed-top">
+
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+      </button>
+                <a class="navbar-brand"><span class="fa fa-commenting-o"></span> angular-js-pagination</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="/dashboard" class="text-uppercase">Dashboard</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    <!--END NAV SECTION -->
+    <br/>
+    <br/>
+    <br/>
+    <section id="home-gallery-sec">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <ng-view></ng-view>
+                </div>
+            </div>
+        </div>
+    </section>
+    <br/>
+    <br/>
+    <br/>
+    <!--FOOTER SECTION -->
+    <div id="footer" class="text-center">
+        https://github.com/MohammedDeveloper‎ | All right(s) reserved
+    </div>
+    <!-- END FOOTER SECTION -->
+
+</body>
+
+</html>
